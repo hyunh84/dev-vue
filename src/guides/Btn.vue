@@ -1,3 +1,3 @@
 <template>
-   <div>Button Guide page</div>
+   <div class="guideTit">Button Guide page</div>
 </template>
