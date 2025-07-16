@@ -1,18 +1,14 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
+// plugins
+import registerPlugins from './plugins'
+
 // 라우터
 import router from '@/router'
 
-// 뷰티파이 UI
-import 'vuetify/styles'
-import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
+const app = createApp(App);
 
-const vuetify = createVuetify({
-  components,
-  directives,
-})
+registerPlugins(app);
 
-createApp(App).use(router).use(vuetify).mount('#app')
+app.use(router).mount('#app')

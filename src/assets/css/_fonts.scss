@@ -1,0 +1,31 @@
+
+
+/* 웹폰트 추가 pretendard */
+@font-face {
+  font-family: 'pretendard';
+  font-style: normal;
+  font-weight: 400;
+  src: url('@/assets/fonts/woff2/Pretendard-Regular.woff2') format('woff2'),
+        url('@/assets/fonts/woff/Pretendard-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'pretendard';
+  font-style: normal;
+  font-weight: 500;
+  src: url('@/assets/fonts/woff2/Pretendard-Medium.woff2') format('woff2'),
+        url('@/assets/fonts/woff/Pretendard-Medium.woff') format('woff');
+}
+@font-face {
+	font-family: 'pretendard';
+	font-style: normal;
+	font-weight: 600;
+	src: url('@/assets/fonts/woff2/Pretendard-SemiBold.woff2') format('woff2'),
+				url('@/assets/fonts/woff/Pretendard-SemiBold.woff') format('woff');
+}
+@font-face {
+	font-family: 'pretendard';
+	font-style: normal;
+	font-weight: 700;
+	src: url('@/assets/fonts/woff2/Pretendard-Bold.woff2') format('woff2'),
+				url('@/assets/fonts/woff/Pretendard-Bold.woff') format('woff');
+}
