@@ -4,7 +4,7 @@ import '@/assets/css/vuetify.scss'
 
 import { createVuetify } from 'vuetify'
 import { aliases } from 'vuetify/iconsets/mdi-svg'
-import { svgIco } from '@/utils/svgIconSet'
+import { VIco } from '@/utils/svgIconSet'
 
 
 // colors = {}
@@ -34,7 +34,7 @@ const vuetifyStyle = createVuetify({
 		defaultSet: 'mdi',
 		aliases,
 		sets: {
-			svgIco,
+			VIco,
 		}
 	},
 	defaults : {

@@ -4,25 +4,25 @@
 	<v-container>
 		<v-row>
 			<v-col col="auto">
-				<v-icon icon="svgIco:menu"/>
+				<v-icon icon="VIco:menu"/>
 			</v-col>
 			<v-col col="auto">
-				<v-icon icon="svgIco:go-back"/>
+				<v-icon icon="VIco:go-back"/>
 			</v-col>
 			<v-col col="auto">
-				<v-icon icon="svgIco:close"/>
+				<v-icon icon="VIco:close"/>
 			</v-col>
 		</v-row>
 
 		<v-row>
 			<v-col col="auto">
-				<v-icon icon="svgIco:menu"/>
+				<v-icon icon="VIco:menu"/>
 			</v-col>
 			<v-col col="auto">
-				<v-icon icon="svgIco:go-back"/>
+				<v-icon icon="VIco:go-back"/>
 			</v-col>
 			<v-col col="auto">
-				<v-icon icon="svgIco:close"/>
+				<v-icon icon="VIco:close"/>
 			</v-col>
 		</v-row>
 	</v-container>

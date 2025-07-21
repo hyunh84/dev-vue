@@ -47,7 +47,7 @@ const allIcons = {
 }
 
 // Vuetify용 icon set
-const svgIco = {
+const VIco = {
   component: (props) => {
     console.log('props === ', props)
     const iconName = props.icon
@@ -60,4 +60,4 @@ const svgIco = {
   },
 }
 
-export { svgIco }
+export { VIco }
