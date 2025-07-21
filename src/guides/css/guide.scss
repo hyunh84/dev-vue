@@ -1,0 +1,13 @@
+.guideLayout {
+
+    [class^="guideTit"] {
+        &:first-child {
+            margin-top:0;
+        }
+        margin:20px 0;
+        line-height:36px;
+        font-size:26px;
+        font-weight:700;
+
+    }
+}

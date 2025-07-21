@@ -5,8 +5,9 @@ import DefaultLayout from '@/layout/DefaultLayout.vue';
 import HomeView from '@/views/HomeView.vue';
 
 // guide
-import GuideLayout from '@/layout/GuideLayout.vue';
+import GuideLayout from '@/guides/GuideLayout.vue';
 import Btn from '@/guides/Btn.vue';
+import Icon from '@/guides/Icon.vue';
 
 const routes = [
   {
@@ -22,6 +23,7 @@ const routes = [
     component: GuideLayout,
     children: [
       { path: 'btn', name:'ButtonGuide', component: Btn },
+      { path: 'icon', name:'IconGuide', component: Icon },
     ]
   },
 ]

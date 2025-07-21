@@ -4,9 +4,9 @@
  * Automatically included in `./src/main.js`
  */
 
-import vuetifyStyle from './vuetify.js'
+import vuetifyPlugin from './vuetify.js'
 
 const registerPlugins = (app) => {
-    app.use(vuetifyStyle);
+    app.use(vuetifyPlugin);
 }
 export default registerPlugins;
