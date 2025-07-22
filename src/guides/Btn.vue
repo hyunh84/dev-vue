@@ -35,21 +35,6 @@
 				</v-btn>
 			</v-col>
 		</v-row>
-		<!-- <v-row>
-			<v-col col="auto">
-				<VBtnUi class="btn-primary" size="large"><span>Primary</span></VBtnUi>
-			</v-col>
-		</v-row>
-		<v-row>
-			<v-col col="auto">
-				<VBtnUi class="btn-secondary" size="large"><span>Secondary</span></VBtnUi>
-			</v-col>
-		</v-row>
-		<v-row>
-			<v-col col="auto">
-				<VBtnUi class="btn-tertiary" size="large"><span>Tertiary</span></VBtnUi>
-			</v-col>
-		</v-row> -->
 	</v-container>
 
 	<div class="guideTit02">size regular</div>
@@ -82,26 +67,6 @@
 				</v-btn>
 			</v-col>
 		</v-row>
-		<!-- <v-row>
-			<v-col col="auto">
-				<VBtnUi class="btn-primary"><span>Primary</span></VBtnUi>
-			</v-col>
-		</v-row>
-		<v-row>
-			<v-col col="auto">
-				<VBtnUi class="btn-secondary"><span>Secondary</span></VBtnUi>
-			</v-col>
-		</v-row>
-		<v-row>
-			<v-col col="auto">
-				<VBtnUi class="btn-tertiary"><span>Tertiary</span></VBtnUi>
-			</v-col>
-		</v-row>
-		<v-row>
-			<v-col col="auto">
-				<VBtnUi class="btn-tertiary02"><span>Tertiary02</span></VBtnUi>
-			</v-col>
-		</v-row> -->
 	</v-container>
 
 	<div class="guideTit02">size small</div>
@@ -134,21 +99,6 @@
 				</v-btn>
 			</v-col>
 		</v-row>
-		<!-- <v-row>
-			<v-col col="auto">
-				<VBtnUi class="btn-primary" size="small"><span>Primary</span></VBtnUi>
-			</v-col>
-		</v-row>
-		<v-row>
-			<v-col col="auto">
-				<VBtnUi class="btn-secondary" size="small"><span>Secondary</span></VBtnUi>
-			</v-col>
-		</v-row>
-		<v-row>
-			<v-col col="auto">
-				<VBtnUi class="btn-tertiary" size="small"><span>Tertiary</span></VBtnUi>
-			</v-col>
-		</v-row> -->
 	</v-container>
 
 	<div class="guideTit02">inline</div>
@@ -175,7 +125,78 @@
 				</v-btn>
 			</v-col>
 		</v-row>
-		<!-- <v-row>
+	</v-container>
+
+
+
+
+
+	
+	<!-- <div class="guideTit02">size large</div>
+	<v-container>
+		<v-row>
+			<v-col col="auto">
+				<VBtnUi class="btn-primary" size="large"><span>Primary</span></VBtnUi>
+			</v-col>
+		</v-row>
+		<v-row>
+			<v-col col="auto">
+				<VBtnUi class="btn-secondary" size="large"><span>Secondary</span></VBtnUi>
+			</v-col>
+		</v-row>
+		<v-row>
+			<v-col col="auto">
+				<VBtnUi class="btn-tertiary" size="large"><span>Tertiary</span></VBtnUi>
+			</v-col>
+		</v-row>
+	</v-container>
+
+	<div class="guideTit02">size regular</div>
+	<v-container>
+		<v-row>
+			<v-col col="auto">
+				<VBtnUi class="btn-primary"><span>Primary</span></VBtnUi>
+			</v-col>
+		</v-row>
+		<v-row>
+			<v-col col="auto">
+				<VBtnUi class="btn-secondary"><span>Secondary</span></VBtnUi>
+			</v-col>
+		</v-row>
+		<v-row>
+			<v-col col="auto">
+				<VBtnUi class="btn-tertiary"><span>Tertiary</span></VBtnUi>
+			</v-col>
+		</v-row>
+		<v-row>
+			<v-col col="auto">
+				<VBtnUi class="btn-tertiary02"><span>Tertiary02</span></VBtnUi>
+			</v-col>
+		</v-row>
+	</v-container>
+
+	<div class="guideTit02">size small</div>
+	<v-container>
+		<v-row>
+			<v-col col="auto">
+				<VBtnUi class="btn-primary" size="small"><span>Primary</span></VBtnUi>
+			</v-col>
+		</v-row>
+		<v-row>
+			<v-col col="auto">
+				<VBtnUi class="btn-secondary" size="small"><span>Secondary</span></VBtnUi>
+			</v-col>
+		</v-row>
+		<v-row>
+			<v-col col="auto">
+				<VBtnUi class="btn-tertiary" size="small"><span>Tertiary</span></VBtnUi>
+			</v-col>
+		</v-row>
+	</v-container>
+
+	<div class="guideTit02">inline</div>
+	<v-container>
+		<v-row>
 			<v-col col="auto">
 				<VBtnUi class="btn-primary" size="small" :block="false" rounded="sm"><span>Primary</span></VBtnUi>
 			</v-col>
@@ -185,8 +206,8 @@
 			<v-col col="auto">
 				<VBtnUi class="btn-tertiary" size="small" :block="false" rounded="sm"><span>Tertiary</span></VBtnUi>
 			</v-col>
-		</v-row> -->
-	</v-container>
+		</v-row>
+	</v-container> -->
 
 
 </template>
