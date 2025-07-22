@@ -1,0 +1,51 @@
+@use 'variables' as *;
+
+.v-btn {
+	&.rounded-120 {
+		border-radius:120px;
+	}
+
+	&.v-btn--size-large {
+		min-height:56px;
+		line-height:24px;
+		font-size:16px;
+		font-weight:800;
+	}
+
+	&.v-btn--size-default {
+		min-height:48px;
+		line-height:20px;
+		font-size:15px;
+		font-weight:700;
+	}
+
+	// priamry
+	&.btn-primary {
+		color:$txt-color-wh;
+		background-color:$bg-primary;
+		border:1px solid $brd-primary;
+		&:active {
+			background-color:#e81c5B;
+		}
+	}
+
+	// secondary
+	&.btn-secondary {
+		color:$txt-color-wh;
+		background-color:$bg-secondary;
+		border:1px solid $brd-secondary;
+		&:active {
+			background-color:#3c3c41;
+		}
+	}
+
+	// secondary
+	&.btn-tertiary {
+		color:$txt-color-gr;
+		background-color:$bg-tertiary;
+		border:1px solid $brd-tertiary;
+		&:active {
+			background-color:#e6e6e6;
+		}
+	}
+}

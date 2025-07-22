@@ -6,6 +6,7 @@ import { createVuetify } from 'vuetify'
 import { aliases } from 'vuetify/iconsets/mdi-svg'
 import { VIco } from '@/utils/svgIconSet'
 
+import VBtnUi from '@/components/Button/VBtnUi.vue'
 
 // colors = {}
 // primary	주요 색상 (버튼, 강조 등)
@@ -18,8 +19,8 @@ import { VIco } from '@/utils/svgIconSet'
 const themeH = {
 	dark : false,
 	colors : {
-		primary : '#F52F6C',
-		error : '#F43327'
+		primary : '#f52f6c',
+		error : '#f43327',
 	}
 }
 
@@ -36,6 +37,9 @@ const vuetifyStyle = createVuetify({
 		sets: {
 			VIco,
 		}
+	},
+	aliases : {
+		VBtnUi,
 	},
 	defaults : {
 		VContainer: {

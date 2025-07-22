@@ -49,7 +49,6 @@ const allIcons = {
 // Vuetify용 icon set
 const VIco = {
   component: (props) => {
-    console.log('props === ', props)
     const iconName = props.icon
     const IconComponent = allIcons[iconName]
     if (!IconComponent) {
