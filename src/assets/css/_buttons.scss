@@ -1,8 +1,17 @@
 @use 'variables' as *;
 
 .v-btn {
-	&.rounded-120 {
-		border-radius:120px;
+	&:hover {
+		 > .v-btn__overlay {
+			display:none;
+		}
+	}
+
+	&.rounded-xl {
+		border-radius:120px !important;
+	}
+	&.rounded-sm {
+		border-radius:8px !important;
 	}
 
 	&.v-btn--size-large {
@@ -16,6 +25,13 @@
 		min-height:48px;
 		line-height:20px;
 		font-size:15px;
+		font-weight:700;
+	}
+
+	&.v-btn--size-small {
+		min-height:40px;
+		line-height:16px;
+		font-size:13px;
 		font-weight:700;
 	}
 
@@ -44,6 +60,16 @@
 		color:$txt-color-gr;
 		background-color:$bg-tertiary;
 		border:1px solid $brd-tertiary;
+		&:active {
+			background-color:#e6e6e6;
+		}
+	}
+
+	// secondary
+	&.btn-tertiary02 {
+		color:$txt-color-gr02;
+		background-color:$bg-tertiary02;
+		border:1px solid $brd-tertiary02;
 		&:active {
 			background-color:#e6e6e6;
 		}

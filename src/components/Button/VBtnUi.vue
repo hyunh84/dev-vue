@@ -6,6 +6,7 @@
 		:ripple="ripple"
 		:block="block"
 		:rounded="rounded"
+		:elevation="elevation"
 		v-bind="$attrs"
 	>
 		<slot />
@@ -21,7 +22,8 @@ export default {
 		ripple: { type: Boolean, default: false },
 		density: { type: String, default: "default" },
 		block: { type: Boolean, default: true },
-		rounded: { type: String, default: '120' },
+		rounded: { type: String, default: 'xl' },
+		elevation: {type: Number, default: 0}
 	},
 	$inheritAttrs: false,
 }
