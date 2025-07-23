@@ -16,13 +16,10 @@
 
 		<v-row>
 			<v-col col="auto">
-				<v-icon icon="VIco:menu"/>
+				<v-icon icon="VIco:plus" size="16"/>
 			</v-col>
 			<v-col col="auto">
-				<v-icon icon="VIco:go-back"/>
-			</v-col>
-			<v-col col="auto">
-				<v-icon icon="VIco:close"/>
+				<v-icon icon="VIco:chevron-down" size="16"/>
 			</v-col>
 		</v-row>
 	</v-container>

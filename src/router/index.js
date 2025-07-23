@@ -8,6 +8,7 @@ import HomeView from '@/views/HomeView.vue';
 import GuideLayout from '@/guides/GuideLayout.vue';
 import Btn from '@/guides/Btn.vue';
 import Icon from '@/guides/Icon.vue';
+import Form from '@/guides/Form.vue';
 
 const routes = [
   {
@@ -24,6 +25,7 @@ const routes = [
     children: [
       { path: 'btn', name:'ButtonGuide', component: Btn },
       { path: 'icon', name:'IconGuide', component: Icon },
+      { path: 'form', name:'FormGuide', component: Form },
     ]
   },
 ]
