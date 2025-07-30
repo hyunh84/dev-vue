@@ -13,12 +13,8 @@
 				font-size:18px;
 				transition:line-height .3s ease, font-size .3s ease, top .3s ease;
 				transform:scale(1);
-				&.v-field-label--floating {
-					top:12px;
-					line-height:16px;
-					font-size:12px;
-				}
 			}
+
 			.v-field__input {
 				padding-top:32px;
 				line-height:24px;
@@ -57,6 +53,34 @@
 						border-radius:8px;
 					}
 				}
+			}
+		}
+	}
+}
+
+// 커스텀 input text
+.inpTxtItems {
+	.v-input {
+		height:auto;
+		display:block;
+		.v-input__control {
+			width:100%;
+		}
+	}
+	.inpField {
+		overflow:hidden;
+		width:100%;
+		border-radius:8px;
+		border:1px solid $brd-gr;
+		background-color:$bg-gr;
+
+		.inp {
+			display:block;
+
+			input {
+				display:block;
+				width:100%;
+				height:100%;
 			}
 		}
 	}

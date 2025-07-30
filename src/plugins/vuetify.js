@@ -7,6 +7,7 @@ import { aliases } from 'vuetify/iconsets/mdi-svg'
 import { VIco } from '@/utils/svgIconSet'
 
 import VBtnUi from '@/components/Button/VBtnUi.vue'
+import VTextUi from '@/components/VTextField/VTextUi.vue'
 
 // colors = {}
 // primary	주요 색상 (버튼, 강조 등)
@@ -40,6 +41,7 @@ const vuetifyStyle = createVuetify({
 	},
 	aliases : {
 		VBtnUi,
+		VTextUi,
 	},
 	defaults : {
 		VContainer: {
