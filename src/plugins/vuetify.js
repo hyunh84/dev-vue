@@ -48,7 +48,7 @@ const vuetifyStyle = createVuetify({
 		VBtn : {
 			variant : 'flat' | 'outline' | 'plain',
 			ripple : false
-		}
+		},
 	}
 })
 

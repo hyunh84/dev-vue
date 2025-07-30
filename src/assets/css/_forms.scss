@@ -1,0 +1,63 @@
+@use 'variables' as *;
+
+.v-input {
+	&.inpTxtField {
+		.v-field {
+			overflow:hidden;
+			height:72px;
+			border-radius:8px;
+
+			.v-label {
+				top:calc(50% - 12px);
+				line-height:24px;
+				font-size:18px;
+				transition:line-height .3s ease, font-size .3s ease, top .3s ease;
+				transform:scale(1);
+				&.v-field-label--floating {
+					top:12px;
+					line-height:16px;
+					font-size:12px;
+				}
+			}
+			.v-field__input {
+				padding-top:32px;
+				line-height:24px;
+				font-size:18px;
+				font-weight:700;
+			}
+
+			.v-field__overlay {
+				opacity:1;
+				background-color:$bg-gr;
+			}
+
+			.v-field__outline {
+				&:before {
+					border:1px solid $brd-gr;
+					opacity:1;
+				}
+				&:after {display:none;}
+			}
+		}
+
+		&.v-input--focused {
+			.v-field--focused {
+				box-shadow:1px 4px 12px rgba(0, 0, 0, .1);
+				.v-label {
+					top:12px;
+					line-height:16px;
+					font-size:12px;
+				}
+				.v-field__overlay {
+					background-color:$bg-wh;
+				}
+				.v-field__outline {
+					&:before {
+						border:2px solid $brd-bk;
+						border-radius:8px;
+					}
+				}
+			}
+		}
+	}
+}
