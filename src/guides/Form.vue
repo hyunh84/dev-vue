@@ -28,8 +28,9 @@
 			<v-col col="auto">
                 <VTextUi
 					label="이름"
+					placeholder='이름을 입력해주세요'
 					:inputAttrs="{
-						title:'이름을 입력해주세요'
+						title:'이름을 입력해주세요',
 					}"
 				/>
 			</v-col>

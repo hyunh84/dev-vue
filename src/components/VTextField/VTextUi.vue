@@ -2,21 +2,25 @@
 
 	<div :class="mergedClass">
 		<v-input
-		:model-value = "modelValue"
-		:rules = "rules"
-		:error-messages="errorMessages"
+			:model-value = "modelValue"
+			:rules = "rules"
+			:error-messages="errorMessages"
+			:disabled="disabled"
 		>
 		<template #default="{props:vInputProps}">
 			<div class="inpField">
 				<template v-if="label">
-					<label :for="inpID">{{label}}</label>
+					<div class="label">
+						<label :for="inpID">{{label}}</label>
+					</div>
+					<div class="placeholder">{{placeholder}}</div>
 				</template>
-				<span class="inp">
+				<div class="inp">
 					<input
 						v-bind="{...vInputProps, ...mergedAttrs}"
 						:id="inpID"
 					/>
-				</span>
+				</div>
 			</div>
 			</template>
 		</v-input>
@@ -32,16 +36,17 @@ import { v4 as uuidv4 } from 'uuid'
 const defaultAttrs = ref({
   type: 'text',
   autocomplete: 'off',
-//   placeholder: "입력해주세요"
 })
 
 // 컴포넌트 전달 받는 속성 선언
 const props = defineProps({
 	modelValue : String,
-	label : String,
-	rules : Array,
-	errorMessages : [String, Array],
 	class : [String, Array, Object],
+	label : String,
+	placeholder: String,
+	rules : Array,
+	disabled: String,
+	errorMessages : [String, Array],
 	inputAttrs: {
 		type: Object,
 	}
