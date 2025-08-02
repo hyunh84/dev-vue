@@ -30,7 +30,7 @@
 		</v-row>
 		<v-row>
 			<v-col col="auto">
-				<v-btn class="btn-tertiary02" size="large" rounded="xl" block>
+				<v-btn size="large" rounded="xl" block>
 					<span class="txtCase">Tertiary02</span>
 				</v-btn>
 			</v-col>
@@ -62,7 +62,7 @@
 		</v-row>
 		<v-row>
 			<v-col col="auto">
-				<v-btn class="btn-tertiary02" rounded="xl" block>
+				<v-btn rounded="xl" block>
 					<span class="txtCase">Tertiary02</span>
 				</v-btn>
 			</v-col>
@@ -94,7 +94,7 @@
 		</v-row>
 		<v-row>
 			<v-col col="auto">
-				<v-btn class="btn-tertiary02" size="small" rounded="xl" block>
+				<v-btn size="small" rounded="xl" block>
 					<span class="txtCase">Tertiary02</span>
 				</v-btn>
 			</v-col>
@@ -126,7 +126,7 @@
 		</v-row>
 		<v-row>
 			<v-col col="auto">
-				<v-btn class="btn-tertiary02" size="small" rounded="xl" block disabled>
+				<v-btn size="small" rounded="xl" block disabled>
 					<span class="txtCase">Tertiary02</span>
 				</v-btn>
 			</v-col>
@@ -152,24 +152,24 @@
 				</v-btn>
 			</v-col>
 			<v-col col="auto">
-				<v-btn class="btn-tertiary02" size="small" rounded="sm">
+				<v-btn size="small" rounded="sm">
 					<span class="txtCase">Tertiary02</span>
 				</v-btn>
 			</v-col>
 			<v-col col="auto">
-				<v-btn class="btn-tertiary02" size="small" rounded="sm">
+				<v-btn size="small" rounded="sm">
 					<v-icon icon="VIco:plus" size="16" class="prepend-icon"></v-icon>
 					<span class="txtCase">Tertiary02</span>
 				</v-btn>
 			</v-col>
 			<v-col col="auto">
-				<v-btn class="btn-tertiary02" size="small" rounded="sm">
+				<v-btn size="small" rounded="sm">
 					<span class="txtCase">Tertiary02</span>
 					<v-icon icon="VIco:chevron-down" size="16" class="append-icon"></v-icon>
 				</v-btn>
 			</v-col>
 			<v-col col="auto">
-				<v-btn class="btn-tertiary02" size="small" rounded="sm" stacked>
+				<v-btn size="small" rounded="sm" stacked>
 					<v-icon icon="VIco:plus" size="16" class="prepend-icon"></v-icon>
 					<span class="txtCase">Tertiary02</span>
 				</v-btn>
@@ -215,7 +215,7 @@
 		</v-row>
 		<v-row>
 			<v-col col="auto">
-				<VBtnUi class="btn-tertiary02"><span>Tertiary02</span></VBtnUi>
+				<VBtnUi><span>Tertiary02</span></VBtnUi>
 			</v-col>
 		</v-row>
 	</v-container>

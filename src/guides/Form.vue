@@ -42,13 +42,6 @@
 					@update:modelValue="updateExText02"
 				/>
 			</v-col>
-			<v-col col="auto">
-                <VTextUi02
-					label="이름"
-					placeholder='이름을 입력해주세요'
-					title='이름을 입력해주세요'
-				/>
-			</v-col>
 		</v-row>
 	</v-container>
 
