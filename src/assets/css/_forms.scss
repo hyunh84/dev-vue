@@ -1,0 +1,294 @@
+@use 'variables' as *;
+
+.v-input {
+	&.inpTxtField {
+		.v-field {
+			overflow:hidden;
+			height:72px;
+			border-radius:8px;
+
+			.v-label {
+				top:calc(50% - 12px);
+				line-height:24px;
+				font-size:18px;
+				transition:line-height .3s ease, font-size .3s ease, top .3s ease;
+				transform:scale(1);
+			}
+
+			.v-field__input {
+				padding-top:32px;
+				line-height:24px;
+				font-size:18px;
+				font-weight:700;
+			}
+
+			.v-field__overlay {
+				opacity:1;
+				background-color:$bg-gr;
+			}
+
+			.v-field__outline {
+				&:before {
+					border:1px solid $brd-gr;
+					opacity:1;
+				}
+				&:after {display:none;}
+			}
+		}
+
+		&.v-input--focused {
+			.v-field--focused {
+				box-shadow:1px 4px 12px rgba(0, 0, 0, .1);
+				.v-label {
+					top:12px;
+					line-height:16px;
+					font-size:12px;
+				}
+				.v-field__overlay {
+					background-color:$bg-wh;
+				}
+				.v-field__outline {
+					&:before {
+						border:2px solid $brd-bk;
+						border-radius:8px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 커스텀 input text
+.inpTxtItems {
+	.inpField {
+		overflow:hidden;
+		position:relative;
+		width:100%;
+		padding:12px 14px;
+		border-radius:8px;
+		border:2px solid $brd-gr;
+		background-color:$bg-gr;
+
+		.label {
+			line-height:16px;
+			font-size:12px;
+			font-weight:700;
+			color:$txt-color-gr03;
+			transition: opacity .3s ease;
+			opacity:1;
+			label {
+				display:block;
+			}
+
+			&[ aria-hidden="true"] {
+				opacity:0;
+				pointer-events:none;
+			}
+
+			&+.inp {
+				visibility:hidden;
+				height:24px;
+				margin-top:4px;
+			}
+		}
+
+		.placeholder {
+			display:flex;
+			overflow:hidden;
+			align-items:center;
+			position:absolute;
+			left:0;
+			top:0;
+			width:100%;
+			height:100%;
+			padding:0 14px;
+			line-height:24px;
+			font-size:18px;
+			font-weight:700;
+			color:$txt-color-gr03;
+			transition: height .3s ease, opacity .3s ease;
+			opacity:1;
+			cursor:pointer;
+
+			& > span {
+				display:block;
+			}
+
+			&[aria-hidden="true"] {
+				height:10%;
+				opacity:0;
+			}
+		}
+
+		.inp {
+			display:block;
+			height:44px;
+
+			input {
+				display:block;
+				width:100%;
+				height:100%;
+				line-height:24px;
+				font-size:18px;
+				font-weight:700;
+				outline:none;
+
+				&::placeholder {
+					color:$txt-color-gr03;
+				}
+			}
+		}
+	}
+
+	&.isFocused {
+		.inpField {
+			border:2px solid $brd-bk;
+			background-color:$bg-wh;
+
+			.label {
+				&+.inp {
+					visibility:visible;
+				}
+			}
+		}
+	}
+
+	&.isVal {
+		.inpField {
+			background-color:$bg-wh;
+
+		.label {
+			&+.inp {
+				visibility:hidden;
+			}
+		}
+		}
+	}
+}
+
+// 커스텀 input text
+.vueTxtField {
+	.inpField {
+		position:relative;
+		padding:12px 14px;
+		border:2px solid $brd-gr;
+		border-radius:8px;
+		background-color:$bg-gr;
+
+		.label {
+			line-height:16px;
+			font-size:12px;
+			font-weight:700;
+			color:$txt-color-gr03;
+			transition: opacity .3s ease;
+			opacity:1;
+			label {
+				display:block;
+			}
+
+			&[ aria-hidden="true"] {
+				opacity:0;
+				pointer-events:none;
+			}
+
+			&+.v-input {
+				visibility:hidden;
+				margin-top:4px;
+				&.v-input--density-default {
+					.v-field__field {
+						height:24px;
+					}
+				}
+			}
+		}
+
+
+		.placeholder {
+			display:flex;
+			overflow:hidden;
+			align-items:center;
+			position:absolute;
+			left:0;
+			top:0;
+			width:100%;
+			height:100%;
+			padding:0 14px;
+			line-height:24px;
+			font-size:18px;
+			font-weight:700;
+			color:$txt-color-gr03;
+			transition: opacity .3s ease;
+			opacity:1;
+			cursor:pointer;
+
+			& > span {
+				display:block;
+			}
+
+			&[aria-hidden="true"] {
+				// transform:translateX(-100%);
+				opacity:0;
+			}
+		}
+
+	}
+	.v-input {
+		border:none;
+		border-radius:0;
+		background:transparent;
+		.v-field__overlay {
+			display:none;
+		}
+		.v-field__outline {
+			display:none;
+		}
+		.v-input__details {
+			display:none;
+		}
+
+		input {padding:0;}
+
+		&.v-input--density-default {
+			.v-field__field {
+				height:44px;
+				input {
+					display:block;
+					width:100%;
+					height:100%;
+					min-height:auto;
+					line-height:24px;
+					font-size:18px;
+					font-weight:700;
+					color:$txt-color-gr02;
+					&::placeholder {
+						color:$txt-color-gr03;
+						opacity:1;
+					}
+				}
+			}
+		}
+	}
+
+	&.isFocused {
+		.inpField {
+			border-color:$bg-bk;
+			background-color:$bg-wh;
+			.label {
+				&+.v-input {
+					visibility:visible;
+				}
+			}
+		}
+	}
+
+	&.isVal {
+		.inpField {
+			background-color:$bg-wh;
+			.label {
+				&+.v-input {
+					visibility:visible;
+				}
+			}
+		}
+	}
+}

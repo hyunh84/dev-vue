@@ -6,6 +6,12 @@
 			display:none;
 		}
 	}
+	&.v-btn--disabled {
+		color:$txt-color-disabled !important;
+		border-color:$bg-disabled !important;
+		background-color:$brd-disabled !important;
+		opacity:1;
+	}
 
 	&.rounded-xl {
 		border-radius:120px !important;
@@ -16,23 +22,35 @@
 
 	&.v-btn--size-large {
 		min-height:56px;
-		line-height:24px;
 		font-size:16px;
 		font-weight:800;
+		.txtCase {
+			display:block;
+			padding-top:2px;
+			line-height:22px;
+		}
 	}
 
 	&.v-btn--size-default {
 		min-height:48px;
-		line-height:20px;
 		font-size:15px;
 		font-weight:700;
+		.txtCase {
+			display:block;
+			padding-top:2px;
+			line-height:18px;
+		}
 	}
 
 	&.v-btn--size-small {
 		min-height:40px;
-		line-height:16px;
 		font-size:13px;
 		font-weight:700;
+		.txtCase {
+			display:block;
+			padding-top:2px;
+			line-height:15px;
+		}
 	}
 
 	// priamry
@@ -74,4 +92,19 @@
 			background-color:#e6e6e6;
 		}
 	}
+
+	.prepend-icon {
+		margin-right:8px;
+	}
+	.append-icon {
+		margin-left:8px;
+	}
+
+	&.v-btn--stacked {
+		.prepend-icon {
+			margin-right:0;
+			margin-bottom:8px;
+		}
+	}
+
 }

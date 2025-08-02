@@ -10,28 +10,28 @@
 		<v-row>
 			<v-col col="auto">
 				<v-btn class="btn-primary" size="large" rounded="xl" block>
-					<span>Primary</span>
+					<span class="txtCase">Primary</span>
 				</v-btn>
 			</v-col>
 		</v-row>
 		<v-row>
 			<v-col col="auto">
 				<v-btn class="btn-secondary" size="large" rounded="xl" block>
-					<span>Secondary</span>
+					<span class="txtCase">Secondary</span>
 				</v-btn>
 			</v-col>
 		</v-row>
 		<v-row>
 			<v-col col="auto">
 				<v-btn class="btn-tertiary" size="large" rounded="xl" block>
-					<span>Tertiary</span>
+					<span class="txtCase">Tertiary</span>
 				</v-btn>
 			</v-col>
 		</v-row>
 		<v-row>
 			<v-col col="auto">
 				<v-btn class="btn-tertiary02" size="large" rounded="xl" block>
-					<span>Tertiary02</span>
+					<span class="txtCase">Tertiary02</span>
 				</v-btn>
 			</v-col>
 		</v-row>
@@ -42,28 +42,28 @@
 		<v-row>
 			<v-col col="auto">
 				<v-btn class="btn-primary" rounded="xl" block >
-					<span>Primary</span>
+					<span class="txtCase">Primary</span>
 				</v-btn>
 			</v-col>
 		</v-row>
 		<v-row>
 			<v-col col="auto">
 				<v-btn class="btn-secondary" rounded="xl" block>
-					<span>Secondary</span>
+					<span class="txtCase">Secondary</span>
 				</v-btn>
 			</v-col>
 		</v-row>
 		<v-row>
 			<v-col col="auto">
 				<v-btn class="btn-tertiary" rounded="xl" block>
-					<span>Tertiary</span>
+					<span class="txtCase">Tertiary</span>
 				</v-btn>
 			</v-col>
 		</v-row>
 		<v-row>
 			<v-col col="auto">
 				<v-btn class="btn-tertiary02" rounded="xl" block>
-					<span>Tertiary02</span>
+					<span class="txtCase">Tertiary02</span>
 				</v-btn>
 			</v-col>
 		</v-row>
@@ -74,64 +74,109 @@
 		<v-row>
 			<v-col col="auto">
 				<v-btn class="btn-primary" size="small" rounded="xl" block >
-					<span>Primary</span>
+					<span class="txtCase">Primary</span>
 				</v-btn>
 			</v-col>
 		</v-row>
 		<v-row>
 			<v-col col="auto">
 				<v-btn class="btn-secondary" size="small" rounded="xl" block>
-					<span>Secondary</span>
+					<span class="txtCase">Secondary</span>
 				</v-btn>
 			</v-col>
 		</v-row>
 		<v-row>
 			<v-col col="auto">
 				<v-btn class="btn-tertiary" size="small" rounded="xl" block>
-					<span>Tertiary</span>
+					<span class="txtCase">Tertiary</span>
 				</v-btn>
 			</v-col>
 		</v-row>
 		<v-row>
 			<v-col col="auto">
 				<v-btn class="btn-tertiary02" size="small" rounded="xl" block>
-					<span>Tertiary02</span>
+					<span class="txtCase">Tertiary02</span>
 				</v-btn>
 			</v-col>
 		</v-row>
 	</v-container>
 
-	<div class="guideTit02">inline</div>
+	<div class="guideTit02">disabled</div>
+	<v-container>
+		<v-row>
+			<v-col col="auto">
+				<v-btn class="btn-primary" size="small" rounded="xl" block disabled>
+					<span class="txtCase">Primary</span>
+				</v-btn>
+			</v-col>
+		</v-row>
+		<v-row>
+			<v-col col="auto">
+				<v-btn class="btn-secondary" size="small" rounded="xl" block disabled>
+					<span class="txtCase">Secondary</span>
+				</v-btn>
+			</v-col>
+		</v-row>
+		<v-row>
+			<v-col col="auto">
+				<v-btn class="btn-tertiary" size="small" rounded="xl" block disabled>
+					<span class="txtCase">Tertiary</span>
+				</v-btn>
+			</v-col>
+		</v-row>
+		<v-row>
+			<v-col col="auto">
+				<v-btn class="btn-tertiary02" size="small" rounded="xl" block disabled>
+					<span class="txtCase">Tertiary02</span>
+				</v-btn>
+			</v-col>
+		</v-row>
+	</v-container>
+
+	<div class="guideTit02">inline Icon</div>
 	<v-container>
 		<v-row>
 			<v-col col="auto">
 				<v-btn class="btn-primary" size="small" rounded="sm">
-					<span>Primary</span>
+					<span class="txtCase">Primary</span>
 				</v-btn>
 			</v-col>
 			<v-col col="auto">
 				<v-btn class="btn-secondary" size="small" rounded="sm">
-					<span>Secondary</span>
+					<span class="txtCase">Secondary</span>
 				</v-btn>
 			</v-col>
 			<v-col col="auto">
 				<v-btn class="btn-tertiary" size="small" rounded="sm">
-					<span>Tertiary</span>
+					<span class="txtCase">Tertiary</span>
 				</v-btn>
 			</v-col>
 			<v-col col="auto">
 				<v-btn class="btn-tertiary02" size="small" rounded="sm">
-					<span>Tertiary02</span>
+					<span class="txtCase">Tertiary02</span>
+				</v-btn>
+			</v-col>
+			<v-col col="auto">
+				<v-btn class="btn-tertiary02" size="small" rounded="sm">
+					<v-icon icon="VIco:plus" size="16" class="prepend-icon"></v-icon>
+					<span class="txtCase">Tertiary02</span>
+				</v-btn>
+			</v-col>
+			<v-col col="auto">
+				<v-btn class="btn-tertiary02" size="small" rounded="sm">
+					<span class="txtCase">Tertiary02</span>
+					<v-icon icon="VIco:chevron-down" size="16" class="append-icon"></v-icon>
+				</v-btn>
+			</v-col>
+			<v-col col="auto">
+				<v-btn class="btn-tertiary02" size="small" rounded="sm" stacked>
+					<v-icon icon="VIco:plus" size="16" class="prepend-icon"></v-icon>
+					<span class="txtCase">Tertiary02</span>
 				</v-btn>
 			</v-col>
 		</v-row>
 	</v-container>
 
-
-
-
-
-	
 	<!-- <div class="guideTit02">size large</div>
 	<v-container>
 		<v-row>
