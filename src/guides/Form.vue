@@ -9,12 +9,27 @@
 	<v-container>
 		<v-row>
 			<v-col col="auto">
-                <v-text-field class="inpTxtField" clearable label="이름"></v-text-field>
+				<VTxtField
+					v-model="exVuetifyTxt01"
+					label="이름"
+					placeholder="이름을 입력해주세요"
+					@update:focused="exVtfFocused01"
+					@update:modelValue="exVtfValue01"
+				/>
+                <!-- <v-text-field class="inpTxtField" clearable label="이름"></v-text-field> -->
 			</v-col>
 		</v-row>
 		<v-row>
 			<v-col col="auto">
-                <v-text-field class="inpTxtField" clearable label="이름" placeholder="이름을 입력해주세요"></v-text-field>
+				<VTxtField
+					v-model="exVuetifyTxt02"
+					label="이름"
+					placeholder="이름을 입력해주세요"
+					clearable
+					@update:focused="exVtfFocused02"
+					@update:modelValue="exVtfValue02"
+				/>
+                <!-- <v-text-field class="inpTxtField" clearable label="이름"></v-text-field> -->
 			</v-col>
 		</v-row>
 		<v-row>
@@ -49,6 +64,25 @@
 
 <script setup>
 import {watch, ref, onMounted} from 'vue';
+
+const exVuetifyTxt01 = ref('초기값 셋팅');
+const exVtfFocused01 = (v)=>{
+	console.log('exVtfFocused01 ============ ', v);
+}
+const exVtfValue01 = (v)=>{
+	console.log('exVtfValue01 ============ ', v);
+	
+}
+
+const exVuetifyTxt02 = ref('');
+const exVtfFocused02 = (v)=>{
+	console.log('exVtfFocused02 ============ ', v);
+}
+const exVtfValue02 = (v)=>{
+	console.log('exVtfValue02 ============ ', v);
+	
+}
+
 
 const exTextRef01 = ref(null);
 const exText01 = ref('초기값 입력 방법');
