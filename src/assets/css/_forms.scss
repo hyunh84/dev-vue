@@ -157,11 +157,11 @@
 		.inpField {
 			background-color:$bg-wh;
 
-		.label {
-			&+.inp {
-				visibility:hidden;
+			.label {
+				&+.inp {
+					visibility:visible;
+				}
 			}
-		}
 		}
 	}
 }
