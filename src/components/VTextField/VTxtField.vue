@@ -6,8 +6,7 @@
 		:class="[...mergedClass, hasVal && 'v-input--value']"
 		@update:focused="onUpdateFocused"
 		@update:modelValue="onUpdateModelValue"
-	>
-	</v-text-field>
+	></v-text-field>
 
 </template>
 

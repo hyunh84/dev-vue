@@ -5,10 +5,10 @@
 	>
 		<div class="inpField">
 			<template v-if="label">
-				<div 
-					class="placeholder" 
-					:aria-hidden="isFocus || hasVal" 
-					:tabindex="(isFocus || hasVal) ? -1 : 0" 
+				<div
+					class="placeholder"
+					:aria-hidden="isFocus || hasVal"
+					:tabindex="(isFocus || hasVal) ? -1 : 0"
 					@focus="onPlaceFocus"
 				>
 					<span>{{placeholder}}</span>
@@ -30,6 +30,13 @@
 				/>
 			</div>
 		</div>
+
+		<template v-if="guideMessagesArray.length">
+			<div class="inpGuide" v-for="(guideTxt, idx) in guideMessagesArray" :key="idx" v-html="guideTxt"></div>
+		</template>
+		<template v-if="hasError">
+			<div class="inpGuide error" v-for="(errorTxt, idx) in errorMessagesArray" :key="idx" v-html="errorTxt"></div>
+		</template>
 	</div>
 
 </template>
@@ -48,7 +55,19 @@ const props = defineProps({
 	placeholder: String,
 	disabled: Boolean,
 	placeholder: String,
-	errorMessages : [String, Array],
+	guideMessages : [String, Array],
+	rules: {
+		type: Array,
+		default: () => [],
+	},
+	error: {
+		type: Boolean,
+		default: false,
+	},
+	errorMessages: {
+		type: [String, Array],
+		default: () => [],
+	},
 	type: {
 		type: String,
 		default: 'text'
@@ -72,6 +91,7 @@ const inpEl = ref(null);
 const inpVal = ref('');
 const isFocus = ref(false);
 const hasVal = ref(false);
+const isModify = ref(false);
 
 // 임의 랜덤 id 생성
 const inpID = ref(`input-${uuidv4()}`);
@@ -83,8 +103,46 @@ const mergedClass = computed(() => {
 		...(Array.isArray(props.class) ? props.class : [props.class]),
 		isFocus.value && 'isFocused',
 		hasVal.value && 'isVal',
+		hasError.value && 'isError',
 	]
 })
+
+// 가이드 문구 배열
+const guideMessagesArray = computed(() =>
+  Array.isArray(props.guideMessages)
+    ? props.guideMessages
+    : props.guideMessages
+    ? [props.guideMessages]
+    : []
+);
+
+// text field error
+const internalErrors = computed(() => {
+  if (!props.rules.length) return [];
+
+  return props.rules
+    .map(rule => rule(props.modelValue))
+    .filter(r => r !== true);
+});
+
+const errorMessagesArray = computed(() => {
+  const internal = internalErrors.value ?? [];
+
+  if(!isModify.value) return [];
+
+  if (internal.length > 0) return internal;
+
+  const val = props.errorMessages;
+  return Array.isArray(val)
+    ? val
+    : typeof val === 'string' && val.trim() !== ''
+    ? [val]
+    : [];
+});
+
+const hasError = computed(() => {
+  return props.error || (isModify.value && errorMessagesArray.value.length > 0);
+});
 
 // placehoder in focus function
 const onPlaceFocus = async ()=>{
@@ -94,10 +152,14 @@ const onPlaceFocus = async ()=>{
 	inpEl.value.focus();
 }
 
-// input focuse function 
+// input focuse function
 const onUpdateFocused = (v)=>{
 	focusSetFn(v);
 	emit('update:focused', v);
+
+	if(!v) {
+		isModify.value = true;
+	}
 }
 
 // focus property setting
@@ -114,6 +176,8 @@ const onInputChange = (e)=>{
 
 const valChangeFn = (val)=>{
 	inpVal.value = val;
+
+	if(isModify.value) isModify.value = false;
 
 	if(!val) {
 		hasVal.value = false;
