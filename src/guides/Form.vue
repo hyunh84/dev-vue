@@ -19,8 +19,6 @@
 				/>
                 <!-- <v-text-field class="inpTxtField" clearable label="이름"></v-text-field> -->
 			</v-col>
-		</v-row>
-		<v-row>
 			<v-col col="auto">
 				<VTxtField
 					v-model="exVuetifyTxt02"
@@ -79,6 +77,24 @@
 					]"
 					@update:focused="focusExText03"
 					@update:modelValue="updateExText03"
+				/>
+			</v-col>
+		</v-row>
+		<v-row>
+			<v-col col="auto">
+				<VfSelect
+					label="선택"
+					v-model="exSlct01"
+					:items="exSlctOpt01"
+					@update:modelValue="onUpdateExSlct01"
+				/>
+			</v-col>
+			<v-col col="auto">
+				<VfSelect
+					label="선택"
+					v-model="exSlct02"
+					:items="exSlctOpt02"
+					@update:modelValue="onUpdateExSlct02"
 				/>
 			</v-col>
 		</v-row>
@@ -145,6 +161,24 @@ const focusExText03 = (isFocus)=>{
 	console.log('isFocus ========= ', isFocus);
 }
 
+
+const exSlct01 = ref(null);
+const exSlctOpt01=['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming'];
+const onUpdateExSlct01 = (v)=>{
+	console.log('onUpdateExSlct01 ===== ', v);
+}
+watch(exSlct01, (v)=>{
+	console.log('onUpdateExSlct01 watch ===== ', v);
+});
+
+const exSlct02 = ref('Wyoming');
+const exSlctOpt02=['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming'];
+const onUpdateExSlct02 = (v)=>{
+	console.log('onUpdateExSlct02 ===== ', v);
+}
+watch(exSlct02, (v)=>{
+	console.log('onUpdateExSlct02 watch ===== ', v);
+});
 
 onMounted(()=>{
 	exTextRef01.value.focus();
