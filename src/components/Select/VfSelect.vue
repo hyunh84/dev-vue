@@ -6,7 +6,11 @@
 		:label="label"
 		:items="items"
 		@update:modelValue="onUpdateModelvalue"
-	></v-select>
+	>
+		<template #item="slotProps">
+			<slot name="item" v-bind="slotProps" />
+		</template>
+	</v-select>
 
 </template>
 
@@ -28,7 +32,7 @@ const props = defineProps({
 // 클래스 병합
 const mergedClass = computed(() => {
   return [
-		'slctItems',
+		'vSlctItems',
 		...(Array.isArray(props.class) ? props.class : [props.class]),
 		hasVal.value && 'v-input--value',
 	]

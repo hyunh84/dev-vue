@@ -97,91 +97,151 @@
 					@update:modelValue="onUpdateExSlct02"
 				/>
 			</v-col>
+			<v-col col="auto">
+				<VfSelect
+					label="선택"
+					v-model="exSlct03"
+					:items="exSlctOpt03"
+					@update:modelValue="onUpdateExSlct03"
+					return-object
+				>
+					 <template #item="{ item, props }">
+						<v-list-item
+							v-bind="props"
+						>
+							<v-list-item-title>
+								{{ title }}
+							</v-list-item-title>
+							<v-list-item-subtitle>
+								{{`${item.value.accNo} | ${item.value.balance}`}}
+							</v-list-item-subtitle>
+						</v-list-item>
+					</template>
+				</VfSelect>
+			</v-col>
+		</v-row>
+		<v-row>
+			<v-col col="auto">
+				<VSelectUi
+					title="은행을 선택해주세요"
+
+				/>
+			</v-col>
 		</v-row>
 	</v-container>
 
 </template>
 
 <script setup>
-import {watch, ref, onMounted} from 'vue';
+	import {watch, ref, onMounted} from 'vue';
 
-const exVuetifyTxt01 = ref('초기값 셋팅');
-const exVtfFocused01 = (v)=>{
-	console.log('exVtfFocused01 ============ ', v);
-}
-const exVtfValue01 = (v)=>{
-	console.log('exVtfValue01 ============ ', v);
+	const exVuetifyTxt01 = ref('초기값 셋팅');
+	const exVtfFocused01 = (v)=>{
+		console.log('exVtfFocused01 ============ ', v);
+	}
+	const exVtfValue01 = (v)=>{
+		console.log('exVtfValue01 ============ ', v);
 
-}
+	}
 
-const exVuetifyTxt02 = ref('');
-const exVtfFocused02 = (v)=>{
-	console.log('exVtfFocused02 ============ ', v);
-}
-const exVtfValue02 = (v)=>{
-	console.log('exVtfValue02 ============ ', v);
+	const exVuetifyTxt02 = ref('');
+	const exVtfFocused02 = (v)=>{
+		console.log('exVtfFocused02 ============ ', v);
+	}
+	const exVtfValue02 = (v)=>{
+		console.log('exVtfValue02 ============ ', v);
 
-}
-
-
-const exTextRef01 = ref(null);
-const exText01 = ref('초기값 입력 방법');
-
-const updateExText01 = (v)=>{
-	console.log(v);
-}
-
-const focusExText01 = (isFocus)=>{
-	console.log('isFocus ========= ', isFocus);
-}
-
-const exText02 = ref('');
-watch(exText02, (val)=>{
-	console.log('exTexxt02 ===== ', val);
-});
-
-const updateExText02 = (v)=>{
-	console.log(v);
-}
-
-const focusExText02 = (isFocus)=>{
-	console.log('isFocus ========= ', isFocus);
-}
-
-const exText03 = ref('');
-watch(exText03, (val)=>{
-	console.log('exTexxt02 ===== ', val);
-});
-
-const updateExText03 = (v)=>{
-	console.log(v);
-}
-
-const focusExText03 = (isFocus)=>{
-	console.log('isFocus ========= ', isFocus);
-}
+	}
 
 
-const exSlct01 = ref(null);
-const exSlctOpt01=['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming'];
-const onUpdateExSlct01 = (v)=>{
-	console.log('onUpdateExSlct01 ===== ', v);
-}
-watch(exSlct01, (v)=>{
-	console.log('onUpdateExSlct01 watch ===== ', v);
-});
+	const exTextRef01 = ref(null);
+	const exText01 = ref('초기값 입력 방법');
 
-const exSlct02 = ref('Wyoming');
-const exSlctOpt02=['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming'];
-const onUpdateExSlct02 = (v)=>{
-	console.log('onUpdateExSlct02 ===== ', v);
-}
-watch(exSlct02, (v)=>{
-	console.log('onUpdateExSlct02 watch ===== ', v);
-});
+	const updateExText01 = (v)=>{
+		console.log(v);
+	}
 
-onMounted(()=>{
-	exTextRef01.value.focus();
-});
+	const focusExText01 = (isFocus)=>{
+		console.log('isFocus ========= ', isFocus);
+	}
+
+	const exText02 = ref('');
+	watch(exText02, (val)=>{
+		console.log('exTexxt02 ===== ', val);
+	});
+
+	const updateExText02 = (v)=>{
+		console.log(v);
+	}
+
+	const focusExText02 = (isFocus)=>{
+		console.log('isFocus ========= ', isFocus);
+	}
+
+	const exText03 = ref('');
+	watch(exText03, (val)=>{
+		console.log('exTexxt02 ===== ', val);
+	});
+
+	const updateExText03 = (v)=>{
+		console.log(v);
+	}
+
+	const focusExText03 = (isFocus)=>{
+		console.log('isFocus ========= ', isFocus);
+	}
+
+
+	const exSlct01 = ref(null);
+	const exSlctOpt01=['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming'];
+	const onUpdateExSlct01 = (v)=>{
+		console.log('onUpdateExSlct01 ===== ', v);
+	}
+	watch(exSlct01, (v)=>{
+		console.log('onUpdateExSlct01 watch ===== ', v);
+	});
+
+	const exSlct02 = ref('Wyoming');
+	const exSlctOpt02=['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming'];
+	const onUpdateExSlct02 = (v)=>{
+		console.log('onUpdateExSlct02 ===== ', v);
+	}
+	watch(exSlct02, (v)=>{
+		console.log('onUpdateExSlct02 watch ===== ', v);
+	});
+
+	const exSlct03 = ref(null);
+	const exSlctOpt03=[
+		{title:'부산은행',
+		 value : {
+			accNo: '111-11111-11111',
+			balance: 30000}
+		},
+		{title:'우리은행',
+		 value : {
+			accNo: '222-11111-11111',
+			balance: 10000}
+		},
+		{title:'신한은행',
+		 value : {
+			accNo: '333-11111-11111',
+			balance: 20000}
+		},
+		{title:'카카오은행',
+		 value : {
+			accNo: '444-11111-11111',
+			balance: 40000}
+		},
+	];
+	const onUpdateExSlct03 = (v)=>{
+		console.log('onUpdateExSlct03 ===== ', v);
+	}
+	watch(exSlct03, (v)=>{
+		console.log('onUpdateExSlct03 watch ===== ', v);
+	});
+
+	onMounted(()=>{
+		exTextRef01.value.focus();
+	});
 </script>
 

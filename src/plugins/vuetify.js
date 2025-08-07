@@ -7,7 +7,6 @@ import { aliases } from 'vuetify/iconsets/mdi-svg'
 import { VIco } from '@/utils/svgIconSet'
 
 import VBtnUi from '@/components/Button/VBtnUi.vue'
-import VTextUi from '@/components/VTextField/VTextUi.vue'
 import VTxtField from '@/components/VTextField/VTxtField.vue'
 import VfSelect from '@/components/Select/VfSelect.vue';
 
@@ -43,7 +42,6 @@ const vuetifyStyle = createVuetify({
 	},
 	aliases : {
 		VBtnUi,
-		VTextUi,
 		VTxtField,
 		VfSelect,
 	},

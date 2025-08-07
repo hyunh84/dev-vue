@@ -24,6 +24,8 @@
 					:id="inpID"
 					:type="type"
 					:placeholder = "placeholder"
+					:title="title"
+					:aria-label="title"
 					@focus="onUpdateFocused(true)"
 					@blur="onUpdateFocused(false)"
 					@input="onInputChange"
@@ -31,11 +33,11 @@
 			</div>
 		</div>
 
-		<template v-if="guideMessagesArray.length">
-			<div class="inpGuide" v-for="(guideTxt, idx) in guideMessagesArray" :key="idx" v-html="guideTxt"></div>
-		</template>
 		<template v-if="hasError">
 			<div class="inpGuide error" v-for="(errorTxt, idx) in errorMessagesArray" :key="idx" v-html="errorTxt"></div>
+		</template>
+		<template v-if="guideMessagesArray.length">
+			<div class="inpGuide" v-for="(guideTxt, idx) in guideMessagesArray" :key="idx" v-html="guideTxt"></div>
 		</template>
 	</div>
 
@@ -55,6 +57,7 @@ const props = defineProps({
 	placeholder: String,
 	disabled: Boolean,
 	placeholder: String,
+	title: String,
 	guideMessages : [String, Array],
 	rules: {
 		type: Array,
@@ -91,7 +94,7 @@ const inpEl = ref(null);
 const inpVal = ref('');
 const isFocus = ref(false);
 const hasVal = ref(false);
-const isModify = ref(false);
+const isError = ref(false);
 
 // 임의 랜덤 id 생성
 const inpID = ref(`input-${uuidv4()}`);
@@ -128,7 +131,7 @@ const internalErrors = computed(() => {
 const errorMessagesArray = computed(() => {
   const internal = internalErrors.value ?? [];
 
-  if(!isModify.value) return [];
+  if(!isError.value) return [];
 
   if (internal.length > 0) return internal;
 
@@ -141,7 +144,7 @@ const errorMessagesArray = computed(() => {
 });
 
 const hasError = computed(() => {
-  return props.error || (isModify.value && errorMessagesArray.value.length > 0);
+  return props.error || (isError.value && errorMessagesArray.value.length > 0);
 });
 
 // placehoder in focus function
@@ -158,7 +161,7 @@ const onUpdateFocused = (v)=>{
 	emit('update:focused', v);
 
 	if(!v) {
-		isModify.value = true;
+		isError.value = true;
 	}
 }
 
@@ -177,7 +180,7 @@ const onInputChange = (e)=>{
 const valChangeFn = (val)=>{
 	inpVal.value = val;
 
-	if(isModify.value) isModify.value = false;
+	if(isError.value) isError.value = false;
 
 	if(!val) {
 		hasVal.value = false;
