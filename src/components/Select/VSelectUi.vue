@@ -1,37 +1,47 @@
 <template>
 
-	<VLayer
-		v-model="layerOpt"
-		class="bottomSheet"
-		title="template"
-	>
-		<template #openBtn>
-			<div :class="mergedClass">
+	<div :class="mergedClass">
+		<VLayer
+			class="bottomSheet"
+			:title="!optTit ? title : optTit"
+			:hideHead="!optTit ? true : false"
+		>
+			<template #openBtn={props}>
 				<div
 					class="txtSelected"
 					role="button"
 					tabindex="0"
 					:title="title"
 					:aria-label="title"
-					@click="onClickToggle"
+					@click="props.open"
 				>
 					<div class="default">선택해주세요</div>
 				</div>
-			</div>
-		</template>
+			</template>
 
-		<div>layer Contents</div>
-	</VLayer>
+			<div class="selectListBox">
+				<ul>
+					<li v-for="(item, index) in items" :key="index">
+						<div>{{ item }}</div>
+					</li>
+				</ul>
+			</div>
+		</VLayer>
+	</div>
 </template>
 
 <script setup>
-import {computed, ref, watch} from 'vue';
+import {computed, ref, watch, useSlots, onMounted} from 'vue';
 
 const props = defineProps({
 	modelValue: String,
 	class: [String, Array],
 	title: String,
+	optTit: String,
+	items: Array,
 });
+
+const slots = useSlots();
 
 const layerOpt = ref(false);
 
@@ -41,11 +51,5 @@ const mergedClass =  computed(() => {
 		...(Array.isArray(props.class) ? props.class : [props.class]),
 	]
 })
-
-// open/close options
-const onClickToggle = ()=> {
-	console.log('onClickToggle ========== ');
-	if(!layerOpt.value) layerOpt.value = true;
-}
 
 </script>

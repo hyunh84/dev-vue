@@ -1,35 +1,36 @@
 <template>
 	<teleport to="#layerAreaWrap">
 		<article :class="class">
+			<div class="dim" aria-hidden="true" @click="closeFn"></div>
 			<div class="layerBox">
 				<div :class="['layerHeader', props.hideHead && 'blind']">
-					<h1 class="layerTitle">{{title}}</h1>
+					<h1 class="layerTitle" v-html="title"></h1>
 				</div>
 
 				<div class="layerBody">
 					<div class="layerConts">
-						<slot />
+							<slot />
 					</div>
 				</div>
 
-				<button type="button" class="layerCloseBtn"><span class="sr-only">닫기</span></button>
+				<template v-if="slots.close">
+					<slot name="close" />
+				</template>
 			</div>
 		</article>
 	</teleport>
 </template>
 
 <script setup>
-import {computed, ref, useSlots, onMounted} from 'vue';
+import { useSlots} from 'vue';
 
 // 속성 정의
 const props = defineProps({
 	modelValue: Boolean,
 	class: [String, Array],
 	title: String,
-	hideHead: {
-		type: Boolean,
-		default: false,
-	}
+	hideHead: Boolean,
+	closeFn: Function,
 });
 
 // 슬롯

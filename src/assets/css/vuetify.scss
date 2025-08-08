@@ -3,11 +3,8 @@
 @forward 'buttons';
 @forward 'forms';
 @forward 'popup';
+@forward 'global';
 
-em, address {font-style:normal;}
-h1, h2, h3, h4, h5, h6, strong {font-weight:800;}
-table {width:100%;border-collapse:collapse;}
-caption {overflow:hidden;margin:0;padding:0;width:0;height:0;font-size:0;line-height:0;}
 .sr-only {
 	display:block !important;
 	overflow:hidden !important;

@@ -9,19 +9,18 @@
 	<v-container>
 		<v-row>
 			<v-col col="auto">
-				<v-btn class="btn-primary" size="large" rounded="xl" block>
-					<span class="txtCase">popup full</span>
-				</v-btn>
+				<VLayer
+					class="alert"
+					title="template"
+				>
+					<template #openBtn={props}>
+						<v-btn class="btn-primary" size="large" rounded="xl" block @click="props.open">
+							<span class="txtCase">popup full</span>
+						</v-btn>
+					</template>
+				</VLayer>
 			</v-col>
 
-            <VLayer
-                class="alert"
-                title="template"
-            >
-                <template #default>
-                    layer Contents
-                </template>
-            </VLayer>
 		</v-row>
 	</v-container>
 

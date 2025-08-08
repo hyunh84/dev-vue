@@ -123,9 +123,13 @@
 		<v-row>
 			<v-col col="auto">
 				<VSelectUi
+					v-model="onUpdateExSlctUi01"
 					title="은행을 선택해주세요"
-
-				/>
+					:items="onUpdateExSlctOpt01"
+				>
+					<!-- <template #optList>
+					</template> -->
+				</VSelectUi>
 			</v-col>
 		</v-row>
 	</v-container>
@@ -239,6 +243,10 @@
 	watch(exSlct03, (v)=>{
 		console.log('onUpdateExSlct03 watch ===== ', v);
 	});
+
+
+	const onUpdateExSlctUi01 = ref('');
+	const onUpdateExSlctOpt01=['California', 'Colorado', 'Florida', 'Georgia', 'Texas', 'Wyoming'];
 
 	onMounted(()=>{
 		exTextRef01.value.focus();
