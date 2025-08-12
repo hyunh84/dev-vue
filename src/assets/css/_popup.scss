@@ -21,13 +21,29 @@
 
         .layerBox {
             visibility:hidden;
+            overflow:hidden;
             position:absolute;
             left:50%;
             top:50%;
+            padding:40px 0 24px;
+            border-radius:16px;
+            background-color:$bg-wh;
             transform:translate(-50%, -50%) scale(.5);
             opacity:0;
             transition:all 300ms ease;
-            background-color:$bg-wh;
+
+            .layerBody {
+                padding:0 24px;
+            }
+
+            .layerCloseBtn {
+                display:block;
+                position:absolute;
+                right:0;
+                top:28px;
+                width:24px;
+                height:24px;
+            }
         }
 
         .dim {
